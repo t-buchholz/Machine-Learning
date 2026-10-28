@@ -1,0 +1,309 @@
+{
+  "seed": 42,
+  "model": {
+    "split_sizes": {
+      "train": 3007,
+      "val": 958,
+      "test": 1035
+    },
+    "n_issuers": {
+      "train": 180,
+      "val": 60,
+      "test": 60
+    },
+    "base_rate": {
+      "train": 0.05620219487861656,
+      "val": 0.06680584551148225,
+      "test": 0.09855072463768116
+    },
+    "best_params": {
+      "learning_rate": 0.03,
+      "max_depth": 3
+    },
+    "thresholds": {
+      "recall_target_threshold": 0.1111111111111111,
+      "cost_minimizing_threshold": 0.08450704225352113
+    },
+    "validation": {
+      "roc_auc": 0.8873479446308724,
+      "pr_auc": 0.3302123999033298,
+      "brier_raw": 0.153151017465219,
+      "brier_calibrated": 0.04958959583930037,
+      "recall_threshold": {
+        "threshold": 0.1111111111111111,
+        "precision": 0.22807017543859648,
+        "recall": 0.8125,
+        "false_positive_rate": 0.19686800894854586,
+        "alert_rate": 0.23799582463465555,
+        "tp": 52,
+        "fp": 176,
+        "fn": 12,
+        "tn": 718,
+        "expected_cost_eur": 4032841.12625
+      },
+      "cost_threshold": {
+        "threshold": 0.08450704225352113,
+        "precision": 0.1939799331103679,
+        "recall": 0.90625,
+        "false_positive_rate": 0.2695749440715884,
+        "alert_rate": 0.31210855949895616,
+        "tp": 58,
+        "fp": 241,
+        "fn": 6,
+        "tn": 653,
+        "expected_cost_eur": 2984693.0774999997
+      }
+    },
+    "test": {
+      "roc_auc": 0.7655097408738415,
+      "pr_auc": 0.2597427846822793,
+      "brier_raw": 0.1893075818040754,
+      "brier_calibrated": 0.08238503430355801,
+      "recall_threshold": {
+        "threshold": 0.1111111111111111,
+        "precision": 0.23367697594501718,
+        "recall": 0.6666666666666666,
+        "false_positive_rate": 0.2390139335476956,
+        "alert_rate": 0.2811594202898551,
+        "tp": 68,
+        "fp": 223,
+        "fn": 34,
+        "tn": 710,
+        "expected_cost_eur": 6025136.86625
+      },
+      "cost_threshold": {
+        "threshold": 0.08450704225352113,
+        "precision": 0.19786096256684493,
+        "recall": 0.7254901960784313,
+        "false_positive_rate": 0.3215434083601286,
+        "alert_rate": 0.36135265700483093,
+        "tp": 74,
+        "fp": 300,
+        "fn": 28,
+        "tn": 633,
+        "expected_cost_eur": 5445028.4037500005
+      },
+      "baseline_logreg": {
+        "roc_auc": 0.7888006220709076,
+        "pr_auc": 0.3013248790617837
+      }
+    }
+  },
+  "portfolio_risk": {
+    "n_bonds": 1035,
+    "total_ead_eur": 2473441520.5,
+    "expected_downgrades": 85.56728158169723,
+    "el_default_eur": 25703387.221287504,
+    "el_migration_eur": 8586887.150239628,
+    "el_total_eur": 34290274.371527135,
+    "simulation": {
+      "n_simulations": 50000,
+      "asset_correlation": 0.2,
+      "horizon_years": 1,
+      "mean_loss_eur": 32054811.920805834
+    },
+    "var_es": {
+      "95%": {
+        "VaR_eur": 84538457.02891372,
+        "ES_eur": 112654910.16205913,
+        "VaR_pct_of_ead": 3.417847413341088,
+        "ES_pct_of_ead": 4.554581510351869
+      },
+      "99%": {
+        "VaR_eur": 129431496.70308319,
+        "ES_eur": 160066556.33572334,
+        "VaR_pct_of_ead": 5.2328504890998575,
+        "ES_pct_of_ead": 6.4714105835567235
+      },
+      "99.5%": {
+        "VaR_eur": 150154072.01770595,
+        "ES_eur": 181773084.82891664,
+        "VaR_pct_of_ead": 6.070653814663574,
+        "ES_pct_of_ead": 7.348994642580904
+      }
+    }
+  },
+  "rating_summary": [
+    {
+      "rating": "AAA",
+      "n_bonds": 66,
+      "exposure": 172088521.0,
+      "mean_downgrade_prob": 0.005115688619945586,
+      "el_default": 8407.1177575,
+      "el_migration": 6476.0110240546965,
+      "el_total": 14883.128781554697,
+      "el_to_exposure_bps": 0.8648530823014452
+    },
+    {
+      "rating": "AA",
+      "n_bonds": 39,
+      "exposure": 87635375.0,
+      "mean_downgrade_prob": 0.0015976026037945541,
+      "el_default": 12341.8389075,
+      "el_migration": 666.9928014705882,
+      "el_total": 13008.831708970587,
+      "el_to_exposure_bps": 1.4844270032473288
+    },
+    {
+      "rating": "A",
+      "n_bonds": 201,
+      "exposure": 454105116.5,
+      "mean_downgrade_prob": 0.027948453509281743,
+      "el_default": 147824.1003225,
+      "el_migration": 130321.48087214824,
+      "el_total": 278145.5811946482,
+      "el_to_exposure_bps": 6.125136473652753
+    },
+    {
+      "rating": "BBB",
+      "n_bonds": 244,
+      "exposure": 558309800.0,
+      "mean_downgrade_prob": 0.07273850314239232,
+      "el_default": 505151.34585000004,
+      "el_migration": 943799.1856663111,
+      "el_total": 1448950.5315163112,
+      "el_to_exposure_bps": 25.95244667953726
+    },
+    {
+      "rating": "BB",
+      "n_bonds": 242,
+      "exposure": 613534106.0,
+      "mean_downgrade_prob": 0.09589829334930425,
+      "el_default": 2707006.7389499997,
+      "el_migration": 1703917.0256476507,
+      "el_total": 4410923.764597651,
+      "el_to_exposure_bps": 71.89370112372613
+    },
+    {
+      "rating": "B",
+      "n_bonds": 157,
+      "exposure": 374078854.0,
+      "mean_downgrade_prob": 0.15978014744018065,
+      "el_default": 6283227.590500001,
+      "el_migration": 2983654.9783708183,
+      "el_total": 9266882.56887082,
+      "el_to_exposure_bps": 247.72537848051738
+    },
+    {
+      "rating": "CCC",
+      "n_bonds": 73,
+      "exposure": 180823733.0,
+      "mean_downgrade_prob": 0.17420941981283977,
+      "el_default": 11898310.599000001,
+      "el_migration": 2581776.5940170963,
+      "el_total": 14480087.193017097,
+      "el_to_exposure_bps": 800.7846621005826
+    },
+    {
+      "rating": "CC",
+      "n_bonds": 13,
+      "exposure": 32866015.0,
+      "mean_downgrade_prob": 0.06087291724201417,
+      "el_default": 4141117.8900000006,
+      "el_migration": 236274.88184007825,
+      "el_total": 4377392.771840079,
+      "el_to_exposure_bps": 1331.89033469378
+    }
+  ],
+  "transition_matrix": {
+    "AAA": {
+      "AAA": 0.941923,
+      "AA": 0.03731,
+      "A": 0.0,
+      "BBB": 0.0,
+      "BB": 0.0,
+      "B": 0.0,
+      "CCC": 0.0,
+      "CC": 0.0,
+      "D": 0.0
+    },
+    "AA": {
+      "AAA": 0.053634,
+      "AA": 0.889591,
+      "A": 0.04892,
+      "BBB": 0.0,
+      "BB": 0.0,
+      "B": 0.0,
+      "CCC": 0.0,
+      "CC": 0.0,
+      "D": 0.0
+    },
+    "A": {
+      "AAA": 0.004443,
+      "AA": 0.066082,
+      "A": 0.873136,
+      "BBB": 0.051435,
+      "BB": 0.0,
+      "B": 0.0,
+      "CCC": 0.0,
+      "CC": 0.0,
+      "D": 0.0
+    },
+    "BBB": {
+      "AAA": 0.0,
+      "AA": 0.006667,
+      "A": 0.069348,
+      "BBB": 0.866062,
+      "BB": 0.050113,
+      "B": 0.0,
+      "CCC": 0.0,
+      "CC": 0.0,
+      "D": 0.0
+    },
+    "BB": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.008065,
+      "BBB": 0.070807,
+      "BB": 0.845194,
+      "B": 0.047696,
+      "CCC": 0.0,
+      "CC": 0.0,
+      "D": 0.0
+    },
+    "B": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.0,
+      "BBB": 0.009815,
+      "BB": 0.078866,
+      "B": 0.801792,
+      "CCC": 0.061097,
+      "CC": 0.0,
+      "D": 0.0
+    },
+    "CCC": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.0,
+      "BBB": 0.0,
+      "BB": 0.016636,
+      "B": 0.095392,
+      "CCC": 0.661137,
+      "CC": 0.079014,
+      "D": 0.0
+    },
+    "CC": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.0,
+      "BBB": 0.0,
+      "BB": 0.0,
+      "B": 0.021843,
+      "CCC": 0.135545,
+      "CC": 0.648258,
+      "D": 0.0
+    },
+    "D": {
+      "AAA": 0.0,
+      "AA": 0.000351,
+      "A": 0.000531,
+      "BBB": 0.001882,
+      "BB": 0.009191,
+      "B": 0.033276,
+      "CCC": 0.142221,
+      "CC": 0.272727,
+      "D": 1.0
+    }
+  }
+}
